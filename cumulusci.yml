@@ -1,0 +1,28 @@
+minimum_cumulusci_version: '3.57.0'
+project:
+    name: p-9584600777
+    package:
+        name: p-9584600777
+        api_version: '54.0'
+    git:
+        default_branch: 'main'
+        prefix_feature: 'feature/'
+        prefix_beta: 'beta/'
+        prefix_release: 'release/'
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/p-9584600777/tests
+            options:
+                outputdir: robot/p-9584600777/results
+
+    robot_testdoc:
+        options:
+            path: robot/p-9584600777/tests
+            output: robot/p-9584600777/doc/p-9584600777_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
